@@ -1,4 +1,5 @@
 from rich import print
+from rich.panel import Panel
 
 def leiaint(msg):
     ok = False 
@@ -32,5 +33,13 @@ def menu(*lista):
         print(f'[yellow]{c}[/] - [blue]{item}[/]')
         c += 1
     print(linha())
+    opc = leiaint('\033[32mSua opção: \033[m')
+    return opc
+
+def menu2(op1,op2,op3):
+    cabeçalho('MENU PRINCIPAL')
+    print(Panel(f'''[yellow]1[/] - [blue]{op1}[/]
+[yellow]2[/] - [blue]{op2}[/]
+[yellow]3[/] - [blue]{op3}[/]''',title='ECOLHA UMA OPÇÃO',width=35))
     opc = leiaint('\033[32mSua opção: \033[m')
     return opc

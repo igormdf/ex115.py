@@ -8,7 +8,7 @@ if not arquivoExiste(arq):
     criarArquivo(arq)
 
 while True:
-    resposta = menu('Ver pessoas cadastradas', 'Cadastrar nova pessoa', 'Sair do sistema')
+    resposta = menu2('Ver pessoas cadastradas', 'Cadastrar nova pessoa', 'Sair do sistema')
     if resposta == 1:
         #listar o conteúdo de um aqrquivo
         lerArquivo(arq)
@@ -19,9 +19,8 @@ while True:
         idade = int(input('idade: '))
         cadastrar(arq, nome, idade)
     elif resposta == 3:
-        print('Opção 3')
         cabeçalho('Saindo so sistema... até logo!')
         break
     else:
-        print('\033[31mERRO! Digite uma opção válida!\033[m')
-    sleep(2)
+        print('[red]ERRO! Digite uma opção válida![/]')
+    sleep(2) 
